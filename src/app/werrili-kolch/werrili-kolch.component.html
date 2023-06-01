@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-stripped">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Asem</th>
+              <th>si3r</th>
+            <th> date</th>
+            </tr>
+
+          </thead>
+          <tbody *ngFor="let produit of LesProduit">
+            <tr >
+              <td> {{ produit.id }}</td>
+              <td>   {{ produit.nom  }}</td>
+              <td>   {{ produit.prix  }}</td>
+              <td>   {{ produit.dateCreation  }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>

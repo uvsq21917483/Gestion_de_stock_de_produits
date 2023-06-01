@@ -1,0 +1,29 @@
+<div class="container">
+      <div class="card shadow mb-4">
+          <div class="card-body">
+            <table class="table table-stripped">
+              <thead>
+                  <tr>
+                      <th>Id</th>
+                      <th>Asem</th>
+                  <th>Si3r</th>
+                <th> date</th>
+                <th>Cat</th>
+                </tr>
+
+              </thead>
+              <tbody *ngFor="let produit of produits">
+                <tr >
+                  <td> {{ produit.id }}</td>
+                  <td>   {{ produit.nom  }}</td>
+                  <td>   {{ produit.prix  }}</td>
+                  <td>   {{ produit.dateCreation  }}</td>
+                  <td>  {{ produit.cat?.nomCat }}</td>
+                  <button type="submit" (click)="Supprimer(produit)"class="btn btn-danger">Supprimer</button>
+                  <button class="btn btn-success" [routerLink]="['/seggemha',produit.id]" >modiffier</button>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+</div>
