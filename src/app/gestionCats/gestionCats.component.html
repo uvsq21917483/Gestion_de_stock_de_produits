@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-stripped">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Asem</th>
+            <th> description</th>
+            </tr>
+
+          </thead>
+          <tbody *ngFor="let caty of LesCatos">
+            <tr >
+              <td> {{ caty.idcat }}</td>
+              <td>   {{ caty.nomCat  }}</td>
+              <td>   {{ caty.descripCat  }}</td>
+
+              <button type="submit" (click)="Supprimiha(caty)"class="btn btn-danger">Supprimer</button>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  <div class="container">
+    <div>
+      <h1>Zid Catkota</h1>
+    </div>
+      <form>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <label>Nom Caty</label>
+          <input type="text" [(ngModel)]="NewCat.nomCat" name="nomCat" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+          <label>Desriptihali</label>
+          <input type="text" [(ngModel)]="NewCat.descripCat" name="descripCat" class="form-control">
+        </div>
+
+        <div class="mt-2">
+          <button type="submit" [disabled]="!NewCat.nomCat" (click)="zidCato()" class="btn btn-success" >Ajouter Catcouta</button>
+
+          <div>
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+</div>

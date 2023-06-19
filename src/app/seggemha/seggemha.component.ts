@@ -21,7 +21,7 @@ export class SeggemhaComponent implements OnInit {
     this.ps.CpnsulterProduit(this.aR.snapshot.params['id']).subscribe
       (p => { this.cp = p; });
     this.ps.listeCats().subscribe(c => {
-      this.categories = c;
+      this.categories = c._embedded.categories;
     });
     this.ps.CpnsulterProduit(this.aR.snapshot.params['id']).subscribe(
       prol => {
@@ -33,7 +33,7 @@ export class SeggemhaComponent implements OnInit {
 
   seggemha() {
     this.cp.cat = this.categories.find(caty => caty.nomCat == this.newIdCat)!;
-    this.ps.updateProduit(this.cp).subscribe(pr => { this.rou.navigate(['produits']) }, (error) => { alert('probleme'); }
+    this.ps.updateProduit(this.cp).subscribe(pr => { this.rou.navigate(['produits']) }, (error) => { alert('probleme f tesgam'); }
     );
   }
 }

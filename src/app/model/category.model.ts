@@ -1,5 +1,5 @@
 export class category{
-  IDcat! : number;
+  idcat! : number;
   nomCat! : string;
   descripCat!:  String ;
 

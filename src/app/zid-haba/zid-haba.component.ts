@@ -14,13 +14,14 @@ export class ZidHabaComponent implements OnInit {
   newProduit = new produit;
   MSG!: string;
   newIdCat! : string;
-  NewCat= new category;
 
   ngOnInit(): void {
     this.ps.listeCats().subscribe(c => {
-      this.categories=c;
-      console.log(this.categories);
+      console.log(c);
+
+      this.categories=c._embedded.categories;
     });
+
   }
 
   constructor (
@@ -39,11 +40,6 @@ zidHaba(){
   })
 };
 
-zidCato(){
-  this.ps.addCat(this.NewCat).subscribe(caty =>{
-    console.log(caty);
-  })
-  this.rou.navigate(['produits']);
-}
+
 
 }

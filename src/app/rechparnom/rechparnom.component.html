@@ -1,0 +1,40 @@
+<div class="container">
+  <form class="form-inline">
+  <!-- <div class="col-sm-4 col-md-4 col-lg-4">
+    <label>Nom Produit</label>
+    <input type="text" [(ngModel)]="nomprod" name="nomProduit" class="form-control">
+    <button type="submit" (click)="elqaha()" class="btn btn-success">cherche</button>
+
+  </div> -->
+
+      <div class="form-group mx-sm-3 mb2 mt-2">
+        <label>nom produit</label>
+        <!-- <input class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)"> -->
+        <input #nom [(ngModel)]="searchTerm" name="searchTerm" class="form-control" >
+      </div>
+</form>
+  <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-stripped">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Asem</th>
+              <th>Si3r</th>
+            <th> date</th>
+            <th>Cat</th>
+            </tr>
+
+          </thead>
+          <tbody *ngFor="let produit of produits | sFilter:searchTerm ">
+            <tr >
+              <td> {{ produit.id }}</td>
+              <td>   {{ produit.nom  }}</td>
+              <td>   {{ produit.prix  }}</td>
+              <td>   {{ produit.dateCreation  }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>

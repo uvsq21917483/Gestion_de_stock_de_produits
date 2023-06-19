@@ -9,6 +9,11 @@ import { WerriliKolchComponent } from './werrili-kolch/werrili-kolch.component';
 import { FormsModule } from '@angular/forms';
 import { SeggemhaComponent } from './seggemha/seggemha.component';
 import { HttpClientModule } from '@angular/common/http';
+import { gestionCatsComponent } from './gestionCats/gestionCats.component';
+import { RechParCatoComponent } from './rech-par-cato/rech-par-cato.component';
+import { RechparnomComponent } from './rechparnom/rechparnom.component';
+import { SFilterPipe } from './sfilter.pipe';
+import {  Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -17,8 +22,12 @@ import { HttpClientModule } from '@angular/common/http';
     ProduitComponent,
     ZidHabaComponent,
     WerriliKolchComponent,
-    SeggemhaComponent
- ],
+    SeggemhaComponent,
+    gestionCatsComponent,
+    RechParCatoComponent,
+    RechparnomComponent,
+    SFilterPipe
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
