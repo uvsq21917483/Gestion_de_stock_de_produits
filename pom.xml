@@ -62,9 +62,21 @@
 		
 		
 	</dependencies>
-
 	<build>
-		<plugins>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>ProductApplicatioin</mainClass> <!-- Replace with your main class -->
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
