@@ -11,10 +11,6 @@ public interface produitService  {
 
 	ProduitDTO saveProduit (ProduitDTO p);
 	ProduitDTO getProduit (Long ID);
-
-	
-	
-	
 	ProduitDTO updateProduit (ProduitDTO p);
 	void deleteProduit (produit p);
 	void deleteProduitById (Long ID);

@@ -44,10 +44,18 @@ public class ProduitRestController {
 	
 	
 	  @RequestMapping(value="/{Id}",method=RequestMethod.DELETE) public void
-	  delete(@PathVariable("Id") Long Id) { ps.deleteProduitById(Id); }
+	  delete(@PathVariable("Id") Long Id) { 
+		  ps.deleteProduitById(Id); 
+	  }
 	 
 	  @RequestMapping(value="klch/{id}",method=RequestMethod.GET)
 		public List<produit> findblidcat(@PathVariable("id") Long id ){
 			return ps.findByIdCat(id);
 		}
+		
+		@RequestMapping(value="PBN/{nom}",method=RequestMethod.GET)
+		public List<produit> FBNP(@PathVariable("nom") String nom){
+			return ps.findByNomContains(nom);
+		}
+		
 }
